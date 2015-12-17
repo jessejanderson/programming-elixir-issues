@@ -8,6 +8,8 @@ defmodule Issues.Mixfile do
      escript: escript_config,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     name: "Issues",
+     source_url: "https://github.com/pragdave/issues",
      deps: deps]
   end
 
@@ -33,6 +35,9 @@ defmodule Issues.Mixfile do
     [
       { :httpoison, "~> 0.4" },
       { :jsx,       "~> 2.0" },
+      # { :ex_doc,    github: "elixir-lang/ex_doc" },
+      { :ex_doc,    "~> 0.11.0" },
+      { :earmark,   ">= 0.0.0" },
       { :credo,     "~> 0.1.9", only: [:dev, :test] }
     ]
   end
